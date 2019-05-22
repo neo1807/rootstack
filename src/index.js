@@ -1,10 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Top from "./layout/top";
+import Side from "./layout/side";
+import Main from "./layout/main";
 
 class App extends React.Component {
   render() {
-    return <div>Hello {this.props.name}</div>;
+    return (
+      <div>
+        <Top />
+        <Side />
+        <Main />
+      </div>
+    );
   }
 }
 var mountNode = document.getElementById("app");
-ReactDOM.render(<App name="Jane" />, mountNode);
+ReactDOM.render(<App />, mountNode);
