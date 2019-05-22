@@ -7,7 +7,7 @@ import Main from "./layout/main";
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <Top />
         <Side />
         <Main />

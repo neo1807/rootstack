@@ -1,4 +1,33 @@
 body {
-  color: white;
-  background-color: black;
+  color: #79909b;
+  background-color: #f4f7f9;
+  margin: 0;
+}
+.wrapper {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas:
+    "side top "
+    "side main";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 250px 1fr;
+}
+.wrapper header {
+  grid-area: top;
+}
+.wrapper aside {
+  grid-area: side;
+}
+.wrapper article {
+  grid-area: main;
+}
+header,
+aside {
+  background-color: white;
+}
+aside {
+  box-shadow: 5px 0px 50px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 5px 0px 50px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 5px 0px 50px 0px rgba(0, 0, 0, 0.1);
 }
