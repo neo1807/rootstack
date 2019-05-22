@@ -6,6 +6,5 @@ class App extends React.Component {
     return <div>Hello {this.props.name}</div>;
   }
 }
-
 var mountNode = document.getElementById("app");
 ReactDOM.render(<App name="Jane" />, mountNode);
