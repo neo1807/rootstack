@@ -6,16 +6,24 @@ export default class CurrentUser extends React.Component {
     return (
       <div className="current-user">
         <div className="inbox">
-          <FiInbox />
+          <a href="/">
+            <FiInbox />
+          </a>
           <div className="has-emails">1</div>
         </div>
         <div className="settings">
           <a href="/">Pedro Perez</a>
           <FiChevronDown />
           <ul className="has-options">
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
+            <li>
+              <a href="/">Link 1</a>
+            </li>
+            <li>
+              <a href="/">Link 2</a>
+            </li>
+            <li>
+              <a href="/">Link 3</a>
+            </li>
           </ul>
         </div>
       </div>

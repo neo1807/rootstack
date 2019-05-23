@@ -5,8 +5,12 @@ export default class Topbar extends React.Component {
   render() {
     return (
       <nav>
-        <FiSearch />
-        <FiGrid />
+        <a href="/">
+          <FiSearch />
+        </a>
+        <a href="/">
+          <FiGrid />
+        </a>
         <CurrentUser />
       </nav>
     );
