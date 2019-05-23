@@ -13,8 +13,8 @@ body {
   grid-template-areas:
     "side top "
     "side main";
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 250px 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 200px 1fr;
 }
 .wrapper header {
   grid-area: top;
@@ -51,6 +51,7 @@ aside nav ul > li {
 aside nav ul > li a {
   text-decoration: none;
   text-transform: uppercase;
+  font-size: .8rem;
 }
 aside nav .toggle-menu {
   display: block;
@@ -85,9 +86,8 @@ aside nav ul > li.is-active {
 aside nav ul > li a svg,
 aside nav .toggle-menu svg {
   margin-right: 15px;
-  width: 1.5em;
-  height: 1.5em;
   vertical-align: middle;
+  font-size:1rem;
 }
 /*
 Header
@@ -98,8 +98,6 @@ header nav {
   justify-content: space-between;
 }
 header nav svg {
-  width: 1.5em;
-  height: 1.5em;
   vertical-align: middle;
 }
 header nav a,
