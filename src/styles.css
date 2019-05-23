@@ -36,14 +36,46 @@ aside nav ul {
   padding: 0;
 }
 aside nav ul > li {
-  padding: 10px 15px 10px 15px;
+  padding: 15px 15px 15px 30px;
 }
 aside nav ul > li a {
   text-decoration: none;
   text-transform: uppercase;
 }
+aside nav .toggle-menu {
+  display: block;
+  padding: 30px;
+}
 aside nav ul > li a,
-aside nav ul > li a:visited {
+aside nav ul > li a:visited,
+aside nav .toggle-menu {
   color: #79909b;
-  font-size: .9rem;
+}
+aside nav ul > li a:hover,
+aside nav .toggle-menu:hover {
+  color: #263238;
+}
+aside nav ul > li.is-active a {
+  color: #263238;
+}
+aside nav ul > li a:hover svg,
+aside nav ul > li.is-active a svg{
+  color: #1eaaf1;
+}
+aside nav ul > li.is-active {
+  border-left: 5px solid #1eaaf1;
+  padding-left: 25px;
+  background: rgb(30, 170, 241);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 170, 241, 0.2) 0%,
+    rgb(255, 255, 255) 7%
+  );
+}
+aside nav ul > li a svg,
+aside nav .toggle-menu svg {
+  margin-right: 15px;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
 }
