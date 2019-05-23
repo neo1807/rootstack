@@ -1,3 +1,6 @@
+/*
+Layout
+*/
 body {
   color: #79909b;
   background-color: #f4f7f9;
@@ -26,6 +29,9 @@ header,
 aside {
   background-color: white;
 }
+/*
+Sidebar
+*/
 aside {
   box-shadow: 5px 0px 50px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 5px 0px 50px 0px rgba(0, 0, 0, 0.1);
@@ -59,7 +65,7 @@ aside nav ul > li.is-active a {
   color: #263238;
 }
 aside nav ul > li a:hover svg,
-aside nav ul > li.is-active a svg{
+aside nav ul > li.is-active a svg {
   color: #1eaaf1;
 }
 aside nav ul > li.is-active {
@@ -78,4 +84,53 @@ aside nav .toggle-menu svg {
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
+}
+/*
+Header
+*/
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+header nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+header nav svg {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+}
+header nav a,
+header nav a:visited {
+  color: #263238;
+  font-weight: bold;
+  text-decoration: none;
+}
+header nav a:hover,
+header nav svg:hover {
+  color: #1eaaf1;
+}
+header nav .current-user svg:last-of-type {
+  margin-left: 5px;
+}
+header nav .current-user .inbox {
+  margin-right: 20px;
+}
+header nav .inbox {
+  position: relative;
+  display: inline-block;
+}
+header nav .inbox .has-emails {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  color: white;
+  background-color: #1eaaf1;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 0.5em;
+  line-height: 0.6em;
 }
