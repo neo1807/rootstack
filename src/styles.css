@@ -134,3 +134,23 @@ header nav .inbox .has-emails {
   font-size: 0.5em;
   line-height: 0.6em;
 }
+header nav .settings {
+  position: relative;
+  display: inline-block;
+}
+header nav .settings .has-options {
+  position: absolute;
+  list-style: none;
+  padding: 5px;
+  background: white;
+  border: 1px solid #e9edef;
+  border-radius: 5px;
+  top: 10px;
+  right: 0px;
+  -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+}
+header nav .settings .has-options li {
+  padding: 5px 15px;
+}

@@ -9,8 +9,15 @@ export default class CurrentUser extends React.Component {
           <FiInbox />
           <div className="has-emails">1</div>
         </div>
-        <a href="/">Pedro Perez</a>
-        <FiChevronDown />
+        <div className="settings">
+          <a href="/">Pedro Perez</a>
+          <FiChevronDown />
+          <ul className="has-options">
+            <li>Link 1</li>
+            <li>Link 2</li>
+            <li>Link 3</li>
+          </ul>
+        </div>
       </div>
     );
   }
