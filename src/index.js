@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import Top from "./layout/top";
 import Side from "./layout/side";
 import Main from "./layout/main";
+import "normalize.css";
+import "./styles.css";
 
 class App extends React.Component {
   render() {
