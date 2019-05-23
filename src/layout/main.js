@@ -3,9 +3,9 @@ import Content from "../components/content";
 export default class Main extends React.Component {
   render() {
     return (
-      <article>
+      <main>
         <Content />
-      </article>
+      </main>
     );
   }
 }
