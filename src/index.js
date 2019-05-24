@@ -6,13 +6,14 @@ import Main from "./layout/main";
 import "normalize.css";
 import "./styles.css";
 import { Provider } from "./leadContext";
+import ModalContainer from "./layout/modal";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       showModal: false,
-      showDropdown: false,
+      showDropDown: false,
       user: "Sofia Baeza",
       toggleModal: this.toggleModal,
       toggleDropDown: this.toggleDropDown,
@@ -133,11 +134,12 @@ class App extends React.Component {
 
   toggleModal = () => this.setState({ showModal: !this.state.showModal });
   toggleDropDown = () =>
-    this.setState({ showDropdown: !this.state.showDropdown });
+    this.setState({ showDropDown: !this.state.showDropDown });
 
   render() {
     return (
       <Provider value={this.state}>
+        <ModalContainer />
         <div className="wrapper">
           <Top />
           <Side />

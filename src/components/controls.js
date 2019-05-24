@@ -1,5 +1,6 @@
 import React from "react";
 import { FiSearch, FiChevronDown, FiPlus } from "react-icons/fi";
+import { Consumer } from "../leadContext";
 export default class Controls extends React.Component {
   render() {
     return (
@@ -16,9 +17,13 @@ export default class Controls extends React.Component {
             <div>
               Source <FiChevronDown />
             </div>
-            <button onClick={""}>
-              <FiPlus /> add contact
-            </button>
+            <Consumer>
+              {context => (
+                <button onClick={context.toggleModal}>
+                  <FiPlus /> add contact
+                </button>
+              )}
+            </Consumer>
           </div>
         </div>
       </div>

@@ -3,10 +3,11 @@ import { createPortal } from "react-dom";
 
 const modalRoot = document.getElementById("modal");
 
-class Portal extends React.Component {
+class Modal extends React.Component {
   constructor(props) {
     super(props);
     this.el = document.createElement("div");
+    this.el.classList.add("modal-opened");
   }
 
   componentDidMount() {
@@ -22,4 +23,4 @@ class Portal extends React.Component {
   }
 }
 
-export default Portal;
+export default Modal;

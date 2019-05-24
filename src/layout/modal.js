@@ -1,30 +1,32 @@
-import Portal from "../modalPortal";
-
-state = { loading: true, showModal: false };
-
-toggleModal = () => this.setState({ showModal: !this.state.showModal });
-
-const {
-  media,
-  animal,
-  breed,
-  location,
-  description,
-  name,
-  showModal
-} = this.state;
-
-<button onClick={this.toggleModal}>Adopt {name}</button>;
-
-
-{
-  showModal ? (
-    <Modal>
-      <h1>Would you like to adopt {name}?</h1>
-      <div className="buttons">
-        <button onClick={this.toggleModal}>Yes</button>
-        <button onClick={this.toggleModal}>No</button>
-      </div>
-    </Modal>
-  ) : null;
+import React from "react";
+import Modal from "../modalPortal";
+import { Consumer } from "../leadContext";
+import ContactForm from "../components/contactForm";
+class ModalContainer extends React.Component {
+  render() {
+    return (
+      <Consumer>
+        {context =>
+          context.showModal ? (
+            <Modal>
+              <div>
+                <a
+                  href="#close"
+                  title="Close"
+                  className="modal-close"
+                  onClick={context.toggleModal}
+                >
+                  Close
+                </a>
+                <h1>Add new contact</h1>
+                <ContactForm />
+              </div>
+            </Modal>
+          ) : null
+        }
+      </Consumer>
+    );
+  }
 }
+
+export default ModalContainer;
