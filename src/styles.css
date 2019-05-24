@@ -101,12 +101,14 @@ header nav svg {
   vertical-align: middle;
 }
 header nav a,
-header nav a:visited {
+header nav a:visited,
+header nav button {
   color: #79909b;
   font-weight: bold;
   text-decoration: none;
 }
 header nav a:hover,
+header nav button:hover,
 header nav svg:hover {
   color: #1eaaf1;
 }
@@ -135,7 +137,16 @@ header nav .settings {
   position: relative;
   display: inline-block;
 }
+header nav .settings button {
+  background: white;
+  border: none;
+  cursor: pointer;
+}
 header nav .settings .has-options {
+  display: none;
+}
+header nav .settings .has-options.is-enabled {
+  display: block;
   position: absolute;
   list-style: none;
   padding: 10px;
@@ -247,3 +258,6 @@ main .content .view-actions div {
 main .content .view-actions div svg {
   vertical-align: middle;
 }
+/*
+Modal
+*/

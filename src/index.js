@@ -11,7 +11,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      showModal: false,
+      showDropdown: false,
       user: "Sofia Baeza",
+      toggleModal: this.toggleModal,
+      toggleDropDown: this.toggleDropDown,
       leads: [
         {
           id: 1,
@@ -126,7 +130,11 @@ class App extends React.Component {
       ]
     };
   }
-  
+
+  toggleModal = () => this.setState({ showModal: !this.state.showModal });
+  toggleDropDown = () =>
+    this.setState({ showDropdown: !this.state.showDropdown });
+
   render() {
     return (
       <Provider value={this.state}>

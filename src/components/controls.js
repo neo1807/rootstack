@@ -16,7 +16,7 @@ export default class Controls extends React.Component {
             <div>
               Source <FiChevronDown />
             </div>
-            <button>
+            <button onClick={""}>
               <FiPlus /> add contact
             </button>
           </div>
