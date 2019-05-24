@@ -17,6 +17,7 @@ class App extends React.Component {
       user: "Sofia Baeza",
       toggleModal: this.toggleModal,
       toggleDropDown: this.toggleDropDown,
+      addContact: this.addContact,
       leads: [
         {
           id: 1,
@@ -133,8 +134,14 @@ class App extends React.Component {
   }
 
   toggleModal = () => this.setState({ showModal: !this.state.showModal });
+
   toggleDropDown = () =>
     this.setState({ showDropDown: !this.state.showDropDown });
+
+  addContact = contact =>
+    this.setState(prevState => {
+      return { leads: [contact, ...prevState.leads] };
+    });
 
   render() {
     return (

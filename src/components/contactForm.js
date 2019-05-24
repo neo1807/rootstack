@@ -2,52 +2,40 @@ import React, { Component } from "react";
 
 class ContactForm extends Component {
   state = {
-    fullName: "",
+    id: 20,
+    avatar:
+      "https://s3.amazonaws.com/uifaces/faces/twitter/andrewcohen/128.jpg",
+    name: "",
     email: "",
     phone: "",
     source: "",
     status: "",
     case: ""
   };
-  handleNameChange = event => {
-    this.setState({
-      fullName: event.target.value
-    });
+
+  handleChange = event => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
   };
-  handleEmailChange = event => {
-    this.setState({
-      email: event.target.value
-    });
-  };
-  handlePhoneChange = event => {
-    this.setState({
-      phone: event.target.value
-    });
-  };
-  handleSourceChange = event => {
-    this.setState({
-      source: event.target.value
-    });
-  };
-  handleStatusChange = event => {
-    this.setState({
-      status: event.target.value
-    });
-  };
-  handleCaseChange = event => {
-    this.setState({
-      case: event.target.value
-    });
+  handleSubmit = () => {
+    event.preventDefault();
+    this.props.addNewContact(this.state);
+    this.setState(
+      { name: "", email: "", phone: "", source: "", status: "", case: "" },
+      this.props.closeModal
+    );
   };
   render() {
     return (
-      <form className="contact-form">
-        <label htmlFor="fullName">
+      <form className="contact-form" onSubmit={this.handleSubmit}>
+        <label htmlFor="name">
           Full Name
           <input
-            id="fullName"
-            onChange={this.handleNameChange}
-            value={this.state.fullName}
+            id="name"
+            type="text"
+            name="name"
+            onChange={this.handleChange}
+            value={this.state.name}
             placeholder="Full Name"
           />
         </label>
@@ -55,7 +43,9 @@ class ContactForm extends Component {
           Email
           <input
             id="email"
-            onChange={this.handleEmailChange}
+            type="text"
+            name="email"
+            onChange={this.handleChange}
             value={this.state.email}
             placeholder="Email"
           />
@@ -64,7 +54,9 @@ class ContactForm extends Component {
           Phone
           <input
             id="phone"
-            onChange={this.handlePhoneChange}
+            type="text"
+            name="phone"
+            onChange={this.handleChange}
             value={this.state.phone}
             placeholder="Phone"
           />
@@ -73,9 +65,10 @@ class ContactForm extends Component {
           Source
           <select
             id="source"
+            name="source"
             value={this.state.source}
-            onChange={this.handleSourceChange}
-            onBlur={this.handleSourceChange}
+            onChange={this.handleChange}
+            onBlur={this.handleChange}
           >
             <option />
             <option>Internet search</option>
@@ -87,9 +80,10 @@ class ContactForm extends Component {
           Case
           <select
             id="case"
+            name="case"
             value={this.state.case}
-            onChange={this.handleCaseChange}
-            onBlur={this.handleCaseeChange}
+            onChange={this.handleChange}
+            onBlur={this.handleChange}
           >
             <option />
             <option>Divorce</option>
@@ -103,9 +97,10 @@ class ContactForm extends Component {
           Status
           <select
             id="status"
+            name="status"
             value={this.state.status}
-            onChange={this.handleStatusChange}
-            onBlur={this.handleStatusChange}
+            onChange={this.handleChange}
+            onBlur={this.handleChange}
           >
             <option />
             <option>Lead</option>

@@ -19,7 +19,10 @@ class ModalContainer extends React.Component {
                   Close
                 </a>
                 <h1>Add new contact</h1>
-                <ContactForm />
+                <ContactForm
+                  addNewContact={context.addContact}
+                  closeModal={context.toggleModal}
+                />
               </div>
             </Modal>
           ) : null
