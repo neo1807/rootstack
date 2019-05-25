@@ -5,17 +5,21 @@ import { Consumer } from "../leadContext";
 export default class Content extends React.Component {
   render() {
     return (
-      <div className="content">
-        <Consumer>
-          {context => (
-            <Controls
-              toggleModal={context.toggleModal}
-              filterRows={context.filterRows}
-            />
-          )}
-        </Consumer>
-        <Table />
-      </div>
+      <Consumer>
+        {context =>
+          context.leads.length > 0 ? (
+            <div className="content">
+              <Controls
+                toggleModal={context.toggleModal}
+                filterRows={context.filterRows}
+              />
+              <Table />
+            </div>
+          ) : (
+            "Loading..."
+          )
+        }
+      </Consumer>
     );
   }
 }
