@@ -1,0 +1,80 @@
+/*
+Modal
+*/
+.modal-opened {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  pointer-events: auto;
+  transition: all 0.3s;
+}
+.modal-opened > div {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: var(--modal-bg-color);
+}
+.modal-opened header {
+  font-weight: bold;
+}
+.modal-opened h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+.modal-close:hover {
+  color: black;
+}
+.modal-opened div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+.modal-opened h1 {
+  margin-bottom: 30px;
+}
+.modal-opened .contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-opened .contact-form label {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.modal-opened .contact-form input,
+.modal-opened .contact-form select {
+  display: block;
+  margin-top: 5px;
+  border: 2px solid var(--border-color);
+  border-radius: 25px;
+}
+.modal-opened .contact-form input {
+  padding: 10px;
+  width: 94%;
+}
+.modal-opened .contact-form select {
+  padding: 7px;
+  width: 100%;
+}
+.modal-opened .contact-form button {
+  margin-top: 20px;
+  width: 100%;
+}
