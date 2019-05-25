@@ -63,7 +63,7 @@ export default class Controls extends React.Component {
               </select>{" "}
               <FiChevronDown />
             </div>
-            <button onClick={this.props.toggleModal}>
+            <button className="button" onClick={this.props.toggleModal}>
               <FiPlus /> add contact
             </button>
           </div>

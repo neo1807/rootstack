@@ -108,7 +108,7 @@ class ContactForm extends Component {
             <option>Prospect</option>
           </select>
         </label>
-        <button>Submit</button>
+        <button className="button">Submit</button>
       </form>
     );
   }
