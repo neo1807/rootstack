@@ -2,10 +2,18 @@ import React from "react";
 import { FiMoreHorizontal } from "react-icons/fi";
 class TableRow extends React.Component {
   state = {
-    showOptions: false
+    showOptions: false,
+    disabled: true,
+    email: "",
+    phone: "",
+    source: "",
+    status: ""
   };
   toggleOptions = () => {
     this.setState({ showOptions: !this.state.showOptions });
+  };
+  toggleEdit = () => {
+    this.setState({ disabled: !this.state.disabled }, this.toggleOptions());
   };
   handleDelete = () => {
     this.props.deleteSelf(this.props.id);
@@ -14,6 +22,14 @@ class TableRow extends React.Component {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };
+  componentDidMount() {
+    this.setState({
+      email: this.props.email,
+      phone: this.props.phone,
+      source: this.props.source,
+      status: this.props.status
+    });
+  }
   render() {
     return (
       <tr>
@@ -30,17 +46,45 @@ class TableRow extends React.Component {
             <small>Case: {this.props.case}</small>
           </div>
         </td>
-        <td className="email">{this.props.email}</td>
-        <td>{this.props.phone}</td>
+        <td className="email">
+          <input
+            type="text"
+            name="email"
+            value={this.state.email}
+            onChange={this.handleChange}
+            disabled={this.state.disabled}
+          />
+        </td>
         <td>
-          <select value={this.props.source}>
+          <input
+            type="text"
+            name="phone"
+            value={this.state.phone}
+            onChange={this.handleChange}
+            disabled={this.state.disabled}
+          />
+        </td>
+        <td>
+          <select
+            value={this.state.source}
+            name="source"
+            onChange={this.handleChange}
+            onBlur={this.handleChange}
+            disabled={this.state.disabled}
+          >
             <option value="Internet search">Internet search</option>
             <option value="Facebook">Facebook</option>
             <option value="Referral">Referral</option>
           </select>
         </td>
         <td>
-          <select value={this.props.status}>
+          <select
+            value={this.state.status}
+            name="status"
+            onChange={this.handleChange}
+            onBlur={this.handleChange}
+            disabled={this.state.disabled}
+          >
             <option value="Lead">Lead</option>
             <option value="Client">Client</option>
             <option value="Prospect">Prospect</option>
@@ -57,7 +101,9 @@ class TableRow extends React.Component {
             }
           >
             <li>
-              <a href="/">Editar</a>
+              <a href="#edit" onClick={this.toggleEdit}>
+                Editar
+              </a>
             </li>
             <li>
               <a href="#delete" onClick={this.handleDelete}>

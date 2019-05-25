@@ -210,13 +210,32 @@ main .content table tbody tr .lead-avatar-empty {
   padding: 15px;
   background-color: aqua;
 }
-main .content table tbody tr .email {
+main .content table tbody tr .email input {
   color: #1eaaf1;
 }
 main .content table tbody tr a,
-main .content table tbody tr a:visited {
+main .content table tbody tr a:visited,
+main .content table tbody tr input {
   color: #79909b;
   text-decoration: none;
+}
+main .content table tbody tr input[disabled],
+main .content table tbody tr select[disabled]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+}
+main .content table tbody tr input,
+main .content table tbody tr select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #e6ecef;
+  border-radius:25px;
+  padding: 10px;
 }
 main .content table tbody tr a:hover,
 main .content table tbody tr svg:hover {
@@ -248,7 +267,6 @@ main .content table tbody tr .lead-options .has-options li {
 main .content table tbody tr .lead-options .has-options li a {
   font-weight: normal;
 }
-
 main .content .view-header {
   display: flex;
   margin-bottom: 20px;

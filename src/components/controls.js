@@ -14,7 +14,7 @@ export default class Controls extends React.Component {
     return (
       <div className="view-header">
         <div className="view-title">
-          <h1>Leads</h1>Showing{" "}
+          <h1>Leads</h1>Showing
           <select
             className="leads-filter"
             name="currentAmount"
@@ -25,8 +25,8 @@ export default class Controls extends React.Component {
             <option value="2">2</option>
             <option value="5">5</option>
             <option value="10">10</option>
-          </select><FiChevronDown />{" "}
-          out of 10 contacts
+          </select>
+          <FiChevronDown /> out of 10 contacts
         </div>
         <div className="view-controls">
           <FiSearch />
