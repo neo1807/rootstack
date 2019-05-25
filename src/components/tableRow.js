@@ -10,7 +10,10 @@ class TableRow extends React.Component {
   handleDelete = () => {
     this.props.deleteSelf(this.props.id);
   };
-
+  handleChange = event => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
   render() {
     return (
       <tr>

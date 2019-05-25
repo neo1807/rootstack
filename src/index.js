@@ -19,6 +19,8 @@ class App extends React.Component {
       toggleDropDown: this.toggleDropDown,
       addContact: this.addContact,
       removeContact: this.removeContact,
+      filterRows: this.filterRows,
+      originalLeads: [],
       leads: [
         {
           id: 1,
@@ -147,6 +149,34 @@ class App extends React.Component {
   removeContact = contact =>
     this.setState(prevState => {
       return { leads: prevState.leads.filter(lead => lead.id != contact) };
+    });
+
+  filterRows = (name, value) =>
+    this.setState(prevState => {
+      if (value == "") {
+        return { leads: prevState.originalLeads, originalLeads: [] };
+      }
+      switch (name) {
+        case "currentAmount":
+          return {
+            originalLeads: prevState.leads,
+            leads: prevState.leads.slice(0, parseInt(value))
+          };
+
+        case "currentCase":
+          return {
+            originalLeads: prevState.leads,
+            leads: prevState.leads.filter(lead => lead.case == value)
+          };
+
+        case "currentSource":
+          return {
+            originalLeads: prevState.leads,
+            leads: prevState.leads.filter(lead => lead.source == value)
+          };
+        default:
+        // code block
+      }
     });
 
   render() {
