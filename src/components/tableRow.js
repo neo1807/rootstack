@@ -66,6 +66,7 @@ class TableRow extends React.Component {
         </td>
         <td className="source">
           <select
+            className="select"
             value={this.state.source}
             name="source"
             onChange={this.handleChange}
@@ -80,6 +81,7 @@ class TableRow extends React.Component {
         </td>
         <td className="status">
           <select
+            className="select"
             value={this.state.status}
             name="status"
             onChange={this.handleChange}

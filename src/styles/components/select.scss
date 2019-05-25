@@ -1,0 +1,39 @@
+/*
+Select
+*/
+.filter,
+.select,
+.select[disabled] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.select {
+  border: 2px solid var(--border-color);
+  border-radius: 25px;
+  padding: 10px 25px 10px 10px;
+}
+.select[disabled] {
+  background-color: transparent;
+  border: none;
+  padding-right: 25px;
+}
+.select[disabled] + svg {
+  margin-left: 0;
+}
+.filter {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+}
+.view-actions .filter {
+  color: var(--main-font-color);
+}
+.view-title .filter {
+  color: var(--active-color);
+}
+.view-title .filter + svg {
+  color: var(--active-color);
+  vertical-align: middle;
+}

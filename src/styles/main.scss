@@ -66,16 +66,14 @@ main .content table tbody tr input {
   color: var(--main-font-color);
   text-decoration: none;
 }
-main .content table tbody tr input[disabled],
-main .content table tbody tr select[disabled] {
+main .content table tbody tr input[disabled] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background-color: transparent;
   border: none;
 }
-main .content table tbody tr input,
-main .content table tbody tr select {
+main .content table tbody tr input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -87,9 +85,6 @@ main .content table tbody tr .source svg,
 main .content table tbody tr .status svg {
   margin-left: -25px;
   vertical-align: middle;
-}
-main .content table tbody tr select[disabled]+svg{
-  margin-left: 0;
 }
 main .content table tbody tr svg:hover {
   color: var(--active-color);
@@ -127,25 +122,5 @@ main .content .view-actions div {
   margin-right: 15px;
 }
 main .content .view-actions div svg {
-  vertical-align: middle;
-}
-main .select-filter,
-main .leads-filter {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: right;
-}
-main .select-filter {
-  color: var(--main-font-color);
-}
-main .leads-filter {
-  color: var(--active-color);
-}
-main .leads-filter + svg {
-  color: var(--active-color);
   vertical-align: middle;
 }

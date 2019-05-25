@@ -16,7 +16,7 @@ export default class Controls extends React.Component {
         <div className="view-title">
           <h1>Leads</h1>Showing
           <select
-            className="leads-filter"
+            className="filter"
             name="currentAmount"
             onChange={this.handleChange}
             onBlur={this.handleChange}
@@ -33,7 +33,7 @@ export default class Controls extends React.Component {
           <div className="view-actions">
             <div>
               <select
-                className="select-filter"
+                className="filter"
                 name="currentCase"
                 onChange={this.handleChange}
                 onBlur={this.handleChange}
@@ -50,7 +50,7 @@ export default class Controls extends React.Component {
             </div>
             <div>
               <select
-                className="select-filter"
+                className="filter"
                 name="currentSource"
                 onChange={this.handleChange}
                 onBlur={this.handleChange}

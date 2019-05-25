@@ -4,7 +4,7 @@ import Top from "./layout/top";
 import Side from "./layout/side";
 import Main from "./layout/main";
 import "normalize.css";
-import "./styles/index.scss";
+import "./index.scss";
 import { Provider } from "./leadContext";
 import ModalContainer from "./layout/modal";
 

@@ -1,0 +1,19 @@
+:root {
+  --main-bg-color: #f4f7f9;
+  --main-font-color: #79909b;
+  --hover-font-color: #263238;
+  --active-color: #1eaaf1;
+  --border-color: #e6ecef;
+  --sidebar-bg-color: white;
+  --modal-bg-color:white;
+}
+
+@import "styles/layout.scss";
+@import "styles/sidebar.scss";
+@import "styles/header.scss";
+@import "styles/modal.scss";
+@import "styles/main.scss";
+@import "styles/components/dropdown.scss";
+@import "styles/components/button.scss";
+@import "styles/components/input.scss";
+@import "styles/components/select.scss";
