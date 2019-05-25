@@ -16,7 +16,7 @@ export default class Controls extends React.Component {
         <div className="view-title">
           <h1>Leads</h1>Showing{" "}
           <select
-            className="select-filter"
+            className="leads-filter"
             name="currentAmount"
             onChange={this.handleChange}
             onBlur={this.handleChange}
@@ -25,7 +25,7 @@ export default class Controls extends React.Component {
             <option value="2">2</option>
             <option value="5">5</option>
             <option value="10">10</option>
-          </select>{" "}
+          </select><FiChevronDown />{" "}
           out of 10 contacts
         </div>
         <div className="view-controls">

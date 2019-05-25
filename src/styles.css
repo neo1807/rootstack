@@ -296,14 +296,25 @@ main .content .view-actions div {
 main .content .view-actions div svg {
   vertical-align: middle;
 }
-main .select-filter{
-  -webkit-appearance: none; 
+main .select-filter,
+main .leads-filter {
+  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color:transparent;
-  border:none;
-  color:#1eaaf1;
-  cursor:pointer;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+}
+main .select-filter {
+  color: #79909b;
+}
+main .leads-filter {
+  color: #1eaaf1;
+}
+main .leads-filter + svg {
+  color: #1eaaf1;
+  vertical-align: middle;
 }
 /*
 Modal
