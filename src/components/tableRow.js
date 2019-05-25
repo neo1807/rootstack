@@ -98,9 +98,7 @@ class TableRow extends React.Component {
           </a>
 
           <ul
-            className={
-              this.state.showOptions ? "has-options is-enabled" : "has-options"
-            }
+            className={this.state.showOptions ? "dropdown enabled" : "dropdown"}
           >
             <li>
               <a href="#edit" onClick={this.toggleEdit}>

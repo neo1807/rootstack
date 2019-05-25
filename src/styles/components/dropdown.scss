@@ -1,0 +1,22 @@
+.dropdown{
+  display:none
+}
+.dropdown.enabled{
+  display: block;
+  position: absolute;
+  list-style: none;
+  padding: 10px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  z-index: 99;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+  -webkit-box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+  -moz-box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+}
+.dropdown li{
+  padding: 10px 15px;
+}
+.dropdown li a {
+  font-weight: normal;
+}

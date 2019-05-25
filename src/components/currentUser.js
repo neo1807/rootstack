@@ -21,9 +21,7 @@ export default class CurrentUser extends React.Component {
 
               <ul
                 className={
-                  context.showDropDown
-                    ? "has-settings is-enabled"
-                    : "has-settings"
+                  context.showDropDown ? "dropdown enabled" : "dropdown"
                 }
               >
                 <li>
