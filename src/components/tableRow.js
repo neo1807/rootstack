@@ -1,5 +1,5 @@
 import React from "react";
-import { FiMoreHorizontal } from "react-icons/fi";
+import { FiMoreHorizontal, FiChevronDown } from "react-icons/fi";
 class TableRow extends React.Component {
   state = {
     showOptions: false,
@@ -48,14 +48,14 @@ class TableRow extends React.Component {
         </td>
         <td className="email">
           <input
-            type="text"
+            type="email"
             name="email"
             value={this.state.email}
             onChange={this.handleChange}
             disabled={this.state.disabled}
           />
         </td>
-        <td>
+        <td className="phone">
           <input
             type="text"
             name="phone"
@@ -64,7 +64,7 @@ class TableRow extends React.Component {
             disabled={this.state.disabled}
           />
         </td>
-        <td>
+        <td className="source">
           <select
             value={this.state.source}
             name="source"
@@ -76,8 +76,9 @@ class TableRow extends React.Component {
             <option value="Facebook">Facebook</option>
             <option value="Referral">Referral</option>
           </select>
+          <FiChevronDown />
         </td>
-        <td>
+        <td className="status">
           <select
             value={this.state.status}
             name="status"
@@ -89,6 +90,7 @@ class TableRow extends React.Component {
             <option value="Client">Client</option>
             <option value="Prospect">Prospect</option>
           </select>
+          <FiChevronDown />
         </td>
         <td className="lead-options">
           <a href="#options" onClick={this.toggleOptions}>

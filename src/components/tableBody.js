@@ -13,20 +13,22 @@ export default class TableBody extends React.Component {
       <Consumer>
         {context => (
           <tbody>
-            {context.leads.map(lead => (
-              <TableRow
-                key={lead.id}
-                id={lead.id}
-                avatar={lead.avatar}
-                name={lead.name}
-                source={lead.source}
-                case={lead.case}
-                status={lead.status}
-                email={lead.email}
-                phone={lead.phone}
-                deleteSelf={context.removeContact}
-              />
-            ))}
+            {context.leads.length > 0
+              ? context.leads.map(lead => (
+                  <TableRow
+                    key={lead.id}
+                    id={lead.id}
+                    avatar={lead.avatar}
+                    name={lead.name}
+                    source={lead.source}
+                    case={lead.case}
+                    status={lead.status}
+                    email={lead.email}
+                    phone={lead.phone}
+                    deleteSelf={context.removeContact}
+                  />
+                ))
+              : null}
           </tbody>
         )}
       </Consumer>

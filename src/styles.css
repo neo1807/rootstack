@@ -13,8 +13,8 @@ body {
   grid-template-areas:
     "side top "
     "side main";
-  grid-template-rows: 50px 1fr;
-  grid-template-columns: 200px 1fr;
+  grid-template-rows: 50px auto;
+  grid-template-columns: 15vw auto;
 }
 .wrapper header {
   grid-area: top;
@@ -24,16 +24,17 @@ body {
 }
 .wrapper aside {
   grid-area: side;
+  position: fixed;
+  width: 15vw;
+  height: 100vh;
   box-shadow: 5px 0px 50px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 5px 0px 50px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 5px 0px 50px 0px rgba(0, 0, 0, 0.1);
 }
 .wrapper main {
   grid-area: main;
-  padding-top: 50px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .wrapper header,
 .wrapper aside {
@@ -55,7 +56,7 @@ aside nav ul > li a {
   font-size: 0.8rem;
 }
 aside nav .toggle-menu {
-  display: block;
+  display: inline-block;
   padding: 30px;
 }
 aside nav ul > li a,
@@ -162,8 +163,12 @@ header nav .settings .has-settings li a {
 /*
 Content
 */
+main .content {
+  margin-top: 50px;
+}
 main .content table {
   border-spacing: 0 1px;
+  table-layout: fixed;
 }
 main .content table thead th {
   text-align: left;
@@ -213,6 +218,10 @@ main .content table tbody tr .lead-avatar-empty {
 main .content table tbody tr .email input {
   color: #1eaaf1;
 }
+main .content table tbody tr .phone input,
+main .content table tbody tr .email input {
+  width: 100%;
+}
 main .content table tbody tr a,
 main .content table tbody tr a:visited,
 main .content table tbody tr input {
@@ -220,22 +229,29 @@ main .content table tbody tr input {
   text-decoration: none;
 }
 main .content table tbody tr input[disabled],
-main .content table tbody tr select[disabled]{
+main .content table tbody tr select[disabled] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background-color: transparent;
   border: none;
-  padding: 10px;
 }
 main .content table tbody tr input,
-main .content table tbody tr select{
+main .content table tbody tr select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border: 2px solid #e6ecef;
-  border-radius:25px;
+  border-radius: 25px;
   padding: 10px;
+}
+main .content table tbody tr .source svg,
+main .content table tbody tr .status svg {
+  margin-left: -25px;
+  vertical-align: middle;
+}
+main .content table tbody tr select[disabled]+svg{
+  margin-left: 0;
 }
 main .content table tbody tr a:hover,
 main .content table tbody tr svg:hover {
@@ -256,6 +272,7 @@ main .content table tbody tr .lead-options .has-options.is-enabled {
   border: 1px solid #e9edef;
   border-radius: 5px;
   top: 35px;
+  right: 30px;
   z-index: 99;
   box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
   -webkit-box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);

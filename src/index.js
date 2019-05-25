@@ -21,122 +21,17 @@ class App extends React.Component {
       removeContact: this.removeContact,
       filterRows: this.filterRows,
       originalLeads: [],
-
-      leads: [
-        {
-          id: 1,
-          name: "Ernesto Munguía",
-          avatar:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/weavermedia/128.jpg",
-          email: "Benjamn.Razo62@hotmail.com",
-          phone: "915.950.221",
-          source: "Referral",
-          status: "Lead",
-          case: "Tax Evasion"
-        },
-        {
-          id: 2,
-          name: "Mercedes de Jesús",
-          avatar:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/sharvin/128.jpg",
-          email: "Lorenzo.Salcedo@gmail.com",
-          phone: "976-598-843",
-          source: "Referral",
-          status: "Lead",
-          case: "Divorce"
-        },
-        {
-          id: 3,
-          name: "Gloria Partida",
-          avatar:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/soyjavi/128.jpg",
-          email: "Guadalupe.Polanco@hotmail.com",
-          phone: "918511396",
-          source: "Referral",
-          status: "Lead",
-          case: "Assault"
-        },
-        {
-          id: 4,
-          name: "Gonzalo Pichardo",
-          avatar:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/homka/128.jpg",
-          email: "Sancho.Pedraza95@hotmail.com",
-          phone: "929.155.891",
-          source: "Internet search",
-          status: "Prospect",
-          case: "Assault"
-        },
-        {
-          id: 5,
-          name: "Adela Olvera",
-          avatar:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/jarjan/128.jpg",
-          email: "Isabela_Collado43@hotmail.com",
-          phone: "968.035.859",
-          source: "Referral",
-          status: "Lead",
-          case: "Divorce"
-        },
-        {
-          id: 6,
-          name: "Victoria Regalado DDS",
-          avatar:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg",
-          email: "LuisMiguel_Lomeli@yahoo.com",
-          phone: "904550889",
-          source: "Facebook",
-          status: "Prospect",
-          case: "Fraud"
-        },
-        {
-          id: 7,
-          name: "Anita Blanco",
-          avatar:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/n1ght_coder/128.jpg",
-          email: "Ricardo.Razo@hotmail.com",
-          phone: "979-353-416",
-          source: "Internet search",
-          status: "Lead",
-          case: "Assault"
-        },
-        {
-          id: 8,
-          name: "Julio Aponte",
-          avatar:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/scottiedude/128.jpg",
-          email: "Carla.Heredia@gmail.com",
-          phone: "965 440 047",
-          source: "Internet search",
-          status: "Lead",
-          case: "Fraud"
-        },
-        {
-          id: 9,
-          name: "Homero Rivera",
-          avatar:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/petebernardo/128.jpg",
-          email: "Gabriel.Salgado@gmail.com",
-          phone: "968029737",
-          source: "Internet search",
-          status: "Prospect",
-          case: "DUI"
-        },
-        {
-          id: 10,
-          name: "Cecilia Arellano",
-          avatar:
-            "https://s3.amazonaws.com/uifaces/faces/twitter/Silveredge9/128.jpg",
-          email: "Virginia.Pineda88@hotmail.com",
-          phone: "902-275-707",
-          source: "Referral",
-          status: "Lead",
-          case: "DUI"
-        }
-      ]
+      leads: []
     };
   }
-
+  componentDidMount() {
+    fetch("https://randomapi.com/api/3bc22cf1c61ad33ace59930af3435437")
+      .then(response => response.json())
+      .then(response => {
+        const { results } = response;
+        this.setState({ user: results[0].user, leads: results[0].leads });
+      });
+  }
   toggleModal = () => this.setState({ showModal: !this.state.showModal });
 
   toggleDropDown = () =>
