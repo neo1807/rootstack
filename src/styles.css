@@ -136,10 +136,10 @@ header nav .settings {
   position: relative;
   display: inline-block;
 }
-header nav .settings .has-options {
+header nav .settings .has-settings {
   display: none;
 }
-header nav .settings .has-options.is-enabled {
+header nav .settings .has-settings.is-enabled {
   display: block;
   position: absolute;
   list-style: none;
@@ -153,10 +153,10 @@ header nav .settings .has-options.is-enabled {
   -webkit-box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
   -moz-box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
 }
-header nav .settings .has-options li {
+header nav .settings .has-settings li {
   padding: 10px 15px;
 }
-header nav .settings .has-options li a {
+header nav .settings .has-settings li a {
   font-weight: normal;
 }
 /*
@@ -213,6 +213,42 @@ main .content table tbody tr .lead-avatar-empty {
 main .content table tbody tr .email {
   color: #1eaaf1;
 }
+main .content table tbody tr a,
+main .content table tbody tr a:visited {
+  color: #79909b;
+  text-decoration: none;
+}
+main .content table tbody tr a:hover,
+main .content table tbody tr svg:hover {
+  color: #1eaaf1;
+}
+main .content table tbody tr .lead-options {
+  position: relative;
+}
+main .content table tbody tr .lead-options .has-options {
+  display: none;
+}
+main .content table tbody tr .lead-options .has-options.is-enabled {
+  display: block;
+  position: absolute;
+  list-style: none;
+  padding: 10px;
+  background: white;
+  border: 1px solid #e9edef;
+  border-radius: 5px;
+  top: 35px;
+  z-index: 99;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+  -webkit-box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+  -moz-box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+}
+main .content table tbody tr .lead-options .has-options li {
+  padding: 10px 15px;
+}
+main .content table tbody tr .lead-options .has-options li a {
+  font-weight: normal;
+}
+
 main .content .view-header {
   display: flex;
   margin-bottom: 20px;
@@ -328,7 +364,6 @@ Modal
   margin-top: 5px;
   border: 2px solid #e6ecef;
   border-radius: 25px;
-  
 }
 .modal-opened .contact-form input {
   padding: 10px;
@@ -340,5 +375,5 @@ Modal
 }
 .modal-opened .contact-form button {
   margin-top: 20px;
-  width:100%
+  width: 100%;
 }

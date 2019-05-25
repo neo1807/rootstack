@@ -18,6 +18,7 @@ class App extends React.Component {
       toggleModal: this.toggleModal,
       toggleDropDown: this.toggleDropDown,
       addContact: this.addContact,
+      removeContact: this.removeContact,
       leads: [
         {
           id: 1,
@@ -141,6 +142,11 @@ class App extends React.Component {
   addContact = contact =>
     this.setState(prevState => {
       return { leads: [contact, ...prevState.leads] };
+    });
+
+  removeContact = contact =>
+    this.setState(prevState => {
+      return { leads: prevState.leads.filter(lead => lead.id != contact) };
     });
 
   render() {

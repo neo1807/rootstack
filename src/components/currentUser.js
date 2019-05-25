@@ -15,15 +15,15 @@ export default class CurrentUser extends React.Component {
         <Consumer>
           {context => (
             <div className="settings">
-              <a href="#option" onClick={context.toggleDropDown}>
+              <a href="#settings" onClick={context.toggleDropDown}>
                 Hello, {context.user} <FiChevronDown />
               </a>
 
               <ul
                 className={
                   context.showDropDown
-                    ? "has-options is-enabled"
-                    : "has-options"
+                    ? "has-settings is-enabled"
+                    : "has-settings"
                 }
               >
                 <li>

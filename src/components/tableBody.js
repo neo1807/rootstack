@@ -16,6 +16,7 @@ export default class TableBody extends React.Component {
             {context.leads.map(lead => (
               <TableRow
                 key={lead.id}
+                id={lead.id}
                 avatar={lead.avatar}
                 name={lead.name}
                 source={lead.source}
@@ -23,6 +24,7 @@ export default class TableBody extends React.Component {
                 status={lead.status}
                 email={lead.email}
                 phone={lead.phone}
+                deleteSelf={context.removeContact}
               />
             ))}
           </tbody>
