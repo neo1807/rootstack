@@ -53,33 +53,10 @@ main .content table tbody tr .lead-avatar-empty {
   padding: 15px;
   background-color: var(--active-color);
 }
-main .content table tbody tr .email input {
-  color: var(--active-color);
-}
-main .content table tbody tr .phone input,
-main .content table tbody tr .email input {
-  width: 100%;
-}
 main .content table tbody tr a,
-main .content table tbody tr a:visited,
-main .content table tbody tr input {
+main .content table tbody tr a:visited {
   color: var(--main-font-color);
   text-decoration: none;
-}
-main .content table tbody tr input[disabled] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  border: none;
-}
-main .content table tbody tr input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 2px solid var(--border-color);
-  border-radius: 25px;
-  padding: 10px;
 }
 main .content table tbody tr .source svg,
 main .content table tbody tr .status svg {
@@ -92,7 +69,7 @@ main .content table tbody tr svg:hover {
 main .content table tbody tr .lead-options {
   position: relative;
 }
-main .content table tbody tr .lead-options .dropdown{
+main .content table tbody tr .lead-options .dropdown {
   top: 35px;
   right: 30px;
 }

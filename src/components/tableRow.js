@@ -48,6 +48,7 @@ class TableRow extends React.Component {
         </td>
         <td className="email">
           <input
+            className="input"
             type="email"
             name="email"
             value={this.state.email}
@@ -57,6 +58,7 @@ class TableRow extends React.Component {
         </td>
         <td className="phone">
           <input
+            className="input"
             type="text"
             name="phone"
             value={this.state.phone}

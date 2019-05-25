@@ -1,0 +1,23 @@
+/*
+Input
+*/
+.input,.input[disabled]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.input{
+  border: 2px solid var(--border-color);
+  border-radius: 25px;
+  color: var(--main-font-color);
+  text-decoration: none;
+  padding: 10px;
+  width: 100%;
+}
+.input[disabled]{
+  background-color: transparent;
+  border: none;
+}
+.email .input {
+  color: var(--active-color);
+}
